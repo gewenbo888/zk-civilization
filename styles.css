@@ -86,10 +86,14 @@ html[data-lang="zh"]{ font-family: "Noto Serif SC", "Source Han Serif SC", "Sour
   display: inline-flex; align-items: center; justify-content: center;
   width: 36px; height: 36px; border-radius: 8px;
   background: linear-gradient(135deg, var(--cyan), var(--magenta));
-  color: var(--bg);
-  font-family: "Space Grotesk", serif; font-weight: 700; font-size: 22px;
   box-shadow: 0 0 18px rgba(0,212,255,0.3), inset 0 0 0 1px rgba(255,255,255,0.15);
 }
+.brand .seal img{
+  width: 18px; height: 25px; display: block;
+  /* Recolor the cyan source to the dark bg so it reads on the gradient. */
+  filter: brightness(0);
+}
+[data-theme="light"] .brand .seal img{ filter: brightness(0) invert(1); }
 .brand em{color: var(--cyan); font-style: normal; font-weight: 500}
 [data-theme="light"] .brand em{color: var(--cyan-2)}
 .nav{display:flex; gap:14px; flex-wrap:wrap; margin-left:8px}
